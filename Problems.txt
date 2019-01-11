@@ -1,0 +1,2 @@
+1. Problem logowania i rozró¿nania u¿ytkowników. $_session + parametr uzy_rola.
+2. Problem komentarzy i odpowiedŸi do nich, zagnie¿d¿enia. kom_id + id. Merging.
