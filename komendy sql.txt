@@ -1,0 +1,15 @@
+select artykul.art_tytul From artykul, kategoria, artykul_kategoria where ( artykul.art_id = artykul_kategoria.art_id AND artykul_kategoria.kat_id= kategoria.kat_id AND artykul.art_tytul like 'Ta%' and artykul_kategoria.kat_id = 3)
+wybor artykulow zaczynajacych sie na 'Ta'
+
+SELECT artykul.art_tytul FROM artykul, uzytkownik WHERE (artykul.uzy_id = uzytkownik.uzy_id AND uzytkownik.uzy_id = 6) wybor artykulow dodanych przez uzy o id 6
+
+SELECT artykul.art_tytul, komentarz.kom_tresc FROM artykul, uzytkownik, komentarz WHERE (artykul.uzy_id = uzytkownik.uzy_id AND artykul.art_id = komentarz.art_id AND uzytkownik.uzy_id = 6)
+zapytanie pokazujace tytul i tresc komentarza ktore zostaly zamiesczone przez uzytownika o id 6 w zamieszonych przez niego artykulach
+
+SELECT artykul.art_tytul, komentarz.kom_tresc FROM artykul, uzytkownik, komentarz WHERE ( artykul.art_id = komentarz.art_id AND komentarz.uzy_id = 6) 
+zapytanie pokazujace tytul i tresc komentarza ktore zostaly zamiesczone przez uzytownika o id 6 we wszystkich artykulach
+
+SELECT * FROM uzytkownik WHERE (uzytkownik.uzy_rola = 1) wyswietlanie danych o uzytkoeniku o roli 1 czyli admina
+
+select komentarz.kom_id,komentarz.kom_tresc, komentarz.pod_komentarz from komentarz where komentarz.pod_komentarz = 10 
+wyswietlanie pod komentarzy do komentarza o wybranym id
